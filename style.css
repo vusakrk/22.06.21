@@ -5,68 +5,49 @@
                     box-sizing: border-box;
                 }
                 
-                body {
+                ul>.navbar-nav {
+                    justify-content: space-around;
+                    background: transparent;
+                }
+                
+                .navbar-light .navbar-nav .nav-link:hover {
+                    color: #FF931E;
+                }
+                
+                .banner-text {
+                    margin-top: 12rem;
+                }
+                
+                .banner-text h1 {
+                    margin-top: 70px;
+                    color: rgb(248, 248, 248);
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                .banner-text p {
+                    color: rgb(255, 255, 255);
+                }
+                
+                .mx-auto {
+                    margin-right: 0!important;
+                    margin-left: auto!important;
+                }
+                
+                .content-banner {
                     background-image: url("https://www.simbrella.com/site/assets/files/1040/cover.jpg");
                     width: 100%;
                     height: 100%;
+                    position: relative;
+                    left: 0;
+                    top: 0;
                     overflow: hidden;
                     background-repeat: no-repeat;
+                    background-position: 10% 50%;
                     background-size: cover;
-                    opacity: 0.7;
-                    background-position: 0 15%;
-                    position: fixed;
                 }
                 
-                .image {
-                    background-image: url("https://www.simbrella.com/site/assets/files/1040/cover.jpg");
-                }
-                
-                nav {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    height: 8rem;
-                    background: transparent;
-                }
-                
-                .nav-links {
-                    display: flex;
-                    background: transparent;
-                    justify-content: space-around;
-                    width: 25%;
-                }
-                
-                .nav-links li {
-                    list-style: none;
-                    z-index: 9999;
-                    color: white;
-                    transition: .1s linear;
-                }
-                
-                .nav-links a {
-                    color: transparent;
-                    text-decoration: none;
-                    font-weight: 600;
-                    font-size: 17px;
-                    z-index: 9999;
-                    color: white;
-                    transition: .1s linear all;
-                }
-                
-                .nav-links a:hover {
-                    color: #EBA85E;
-                }
-                
-                .text {
-                    width: 100%;
-                    max-width: 1300px;
-                    margin: 0 auto;
-                    padding: 0 20px;
-                    color: #fff;
-                    position: relative;
-                }
-                
-                body::before {
+                .content-banner::before {
                     content: "";
                     display: block;
                     width: 100%;
@@ -77,16 +58,87 @@
                     top: 0;
                 }
                 
-                .text h1 {
-                    font-size: 48px;
-                    line-height: 1.29;
-                    font-weight: 700;
-                    font-family: 'Poppins';
-                    z-index: 9999;
+                .content-banner::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0
                 }
                 
-                .paragraph {
-                    font-family: 'Poppins';
-                    z-index: 9999;
-                    color: #ffff;
+                .header-text h2 {
+                    color: #2D3192;
+                    margin-top: 40px;
+                }
+                
+                .button a {
+                    display: inline-block;
+                    height: 56px;
+                    padding: 0 100px 0 24px;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 56px;
+                    color: #222;
+                    text-decoration: none;
+                    background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") no-repeat calc(100% - 24px) 50%;
+                    border-radius: 12px;
+                    transition: all 0.15s linear;
+                    margin-left: 78%;
+                    border: 2px solid #DFE4EB;
+                    text-align: center;
+                }
+                
+                .button a:hover {
+                    background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") no-repeat calc(100% - 20px) 50%;
+                    -webkit-box-shadow: inset 0 0 0 3px #FF931E;
+                    box-shadow: inset 0 0 0 3px #FF931E;
+                }
+                
+                .cards {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-content: stretch;
+                    align-items: stretch;
+                    text-align: center;
+                }
+                
+                .cards article {
+                    width: calc(33.333% - 20px);
+                    padding: 40px 20px;
+                    position: relative;
+                    border-radius: 4px;
+                    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+                }
+                
+                .cards article:hover {
+                    transform: scale(1.03);
+                }
+                
+                .cards img {
+                    width: 100%;
+                    position: relative;
+                    height: 230px;
+                    text-align: center;
+                }
+                
+                .cards h5 {
+                    padding: 0 0 16px;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 1.25;
+                    text-align: center;
+                    letter-spacing: 0.01em;
+                    color: #222;
+                }
+                
+                .cards p {
+                    font-size: 16px;
+                    line-height: 1.62;
+                    text-align: center;
+                    color: #5F6773;
                 }
